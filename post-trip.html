@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<head>
+
+  <title>Post a Trip | TripShare</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 35px;
+    }
+
+    h1 {
+      color: #056608;
+      margin-bottom: 10px;
+      margin-top: 15px;
+      font-size: 50px;
+    }
+
+    h2 {
+      color: #c45f16;
+      font-size: 21px;
+    }
+
+    p {
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    a {
+      color: #6b9c7d;
+      margin-right: 20px;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .menu {
+      display: flex;
+      gap: 10px;
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    fieldset {
+      background-color: #e3eee5;
+      border: 0;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    legend {
+      color: #c45f16;
+      font-size: 21px;
+      font-weight: bold;
+      padding-top: 12px;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .form-field {
+      margin: 10px 0 15px;
+      flex: 1;
+      min-width: 200px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input,
+    select,
+    textarea {
+      box-sizing: border-box;
+      padding: 9px;
+      border: 1px solid #a8b8ae;
+      border-radius: 4px;
+      font-family: Arial, sans-serif;
+      max-width: 100%;
+    }
+
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      width: 100%;
+    }
+
+    .field-help,
+    .prototype-notice {
+      color: #667570;
+      font-size: 14px;
+    }
+
+    .commission-notice {
+      background-color: #e3eee5;
+      border-radius: 8px;
+      padding: 15px 20px;
+      margin: 20px 0;
+    }
+
+    .commission-notice h2 {
+      margin-top: 5px;
+    }
+
+    .checkbox-field {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 20px 0;
+    }
+
+    button {
+      color: #94450d;
+      font-size: 18px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    .trip-confirmation {
+      background-color: #e3eee5;
+      border-radius: 8px;
+      padding: 20px;
+      margin-top: 25px;
+    }
+
+    .trip-confirmation dt {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .trip-confirmation dd {
+      margin: 4px 0 10px;
+    }
+
+
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #667570;
+      margin-top: 40px;
+    }
+
+    footer p {
+      margin: 5px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="nav">
+    <a href="Home.html">Home</a>
+
+    <div class="menu">
+      <a href="FindTrip.html">Find a Trip</a>
+      <a href="post-trip.html">Post a Trip</a>
+      <a href="Home.html#how-it-works">How It Works</a>
+      <a href="mailto:tripshare.service@gmail.com">Contact us</a>
+    </div>
+  </div>
+
+  <main class="post-trip-main">
+
+    <h1>POST YOUR TRIP<br> Where are you driving? </h1>
+    <p>
+      Create a sample trip offering passenger seats, small-item
+      space, or both.
+    </p>
+
+
+    <form id="post-trip-form" class="post-trip-form" style="background-color: #e3eee5;
+            padding: 20px;
+            border-radius: 8px;">
+
+      <h2>Your route</h2>
+
+      <div class="form-field">
+        <label for="trip-origin">Departure city</label>
+        <select id="trip-origin" name="origin" required>
+          <option value="">Select a city</option>
+          <option value="Vancouver">Vancouver</option>
+          <option value="Kelowna">Kelowna</option>
+          <option value="Victoria">Victoria</option>
+        </select>
+      </div>
+
+      <div class="form-field">
+        <label for="trip-destination">Destination city</label>
+        <select id="trip-destination" name="destination" required>
+          <option value="">Select a city</option>
+          <option value="Vancouver">Vancouver</option>
+          <option value="Kelowna">Kelowna</option>
+          <option value="Victoria">Victoria</option>
+        </select>
+      </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="departure-date">Departure date</label>
+          <input id="departure-date" name="departureDate" type="date" required>
+        </div>
+
+        <div class="form-field">
+          <label for="departure-time">Departure time</label>
+          <input id="departure-time" name="departureTime" type="time" required>
+        </div>
+      </div>
+
+
+      <h2>What can you carry?</h2>
+
+      <div class="form-field">
+        <label for="trip-service">Trip type</label>
+        <select id="trip-service" name="service" required>
+          <option value="passengers">Passengers only</option>
+          <option value="items">Small items only</option>
+          <option value="both">Passengers and small items</option>
+        </select>
+      </div>
+
+      <div id="passenger-fields" class="conditional-fields">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="seats">Available passenger seats</label>
+            <input id="seats" name="seats" type="number" min="1" max="8" step="1" required>
+          </div>
+
+          <div class="form-field">
+            <label for="seat-fare">Fare per seat (CAD)</label>
+            <input id="seat-fare" name="seatFare" type="number" min="1" step="0.01" placeholder="45.00" required>
+          </div>
+        </div>
+      </div>
+
+      <div id="item-fields" class="conditional-fields" hidden>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="item-capacity">Item space available</label>
+            <select id="item-capacity" name="itemCapacity" disabled>
+              <option value="">Select a capacity</option>
+              <option value="One small parcel">One small parcel</option>
+              <option value="Two small parcels">Two small parcels</option>
+              <option value="Three small parcels">Three small parcels</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="item-fare">Starting fare per item (CAD)</label>
+            <input id="item-fare" name="itemFare" type="number" min="1" step="0.01" placeholder="20.00" disabled>
+          </div>
+        </div>
+
+        <p class="field-help">
+          Demo pricing only. Final item eligibility, size limits,
+          and pricing rules still need to be defined.
+        </p>
+      </div>
+
+
+      <h2>Trip notes</h2>
+      <label for="trip-notes">Additional information (optional)</label>
+      <textarea id="trip-notes" name="notes" rows="4" maxlength="500" style="width: 100%;"
+        placeholder="Example: Meeting point to be agreed before departure."></textarea>
+
+
+      <p class="field-help">
+        Do not enter personal addresses, identification details,
+        or payment information.
+      </p>
+
+
+      <h2>Planned Driver Earnings</h2>
+      <p>
+        TripShare's proposed commission is 20% of each completed
+        transaction's fare. The driver receives the remaining 80%.
+      </p>
+
+
+      <label class="checkbox-field">
+        <input id="demo-agreement" type="checkbox" required>
+        <span>
+          I have read the above information.
+        </span>
+      </label>
+
+      <button type="submit"
+        style="background-color: #056608; color: white; padding: 10px 20px; border: none; border-radius: 4px;">
+        Post Trip
+      </button>
+    </form>
+
+    <section id="trip-confirmation" class="trip-confirmation" aria-labelledby="confirmation-title" tabindex="-1" hidden>
+      <p>DEMO PREVIEW</p>
+      <h2 id="confirmation-title">Your sample trip is ready.</h2>
+      <p>This preview has not been saved or published.</p>
+
+      <dl id="confirmation-details"></dl>
+
+      <a href="Home.html">Back to Home</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>A BCIT student project. Not a live transportation service.</p>
+    <p>© 2026 TripShare</p>
+  </footer>
+
+</body>
