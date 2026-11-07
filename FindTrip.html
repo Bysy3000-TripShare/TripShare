@@ -1,0 +1,201 @@
+<title>Find Your Trip | ShareTrip</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        margin: 35px;
+    }
+
+    h1 {
+        color: #056608;
+        margin-bottom: 10px;
+        margin-top: 15px;
+        font-size: 50px;
+    }
+
+    h2 {
+        color: #c45f16;
+        font-size: 21px;
+    }
+
+    p {
+        font-size: 16px;
+        margin-top: 10px
+    }
+
+    a {
+        color: #6b9c7d;
+        margin-right: 20px;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu {
+        display: flex;
+        gap: 10px;
+    }
+
+    form {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    footer {
+        text-align: center;
+        font-size: 14px;
+        color: #667570;
+        margin-top: 40px;
+    }
+
+    footer p {
+        margin: 5px;
+    }
+</style>
+
+<div class="nav">
+    <a href="Home.html">Home</a>
+
+    <div class="menu">
+        <a href="FindTrip.html">Find a Trip</a>
+        <a href="post-trip.html">Post a Trip</a>
+        <a href="Home.html#how-it-works">How It Works</a>
+        <a href="mailto:tripshare.service@gmail.com">Contact us</a>
+    </div>
+</div>
+
+
+<h1>Where are you heading? <br> FIND YOUR MATCH</h1>
+<p>Explore sample trips on our planned pilot routes.</p>
+
+<div style="background-color: #e3eee5;
+            padding: 20px;
+            border-radius: 8px;">
+
+    <h2>Find Your Route</h2>
+
+    <form>
+        <label>I want to:</label>
+        <select name="trip-type">
+            <option value="seat">Find a seat</option>
+            <option value="item">Send an item</option>
+            <option value="both">Both</option>
+        </select>
+
+        <label>From:</label>
+        <select name="from">
+            <option value="Vancouver">Vancouver</option>
+            <option value="Kelowna">Kelowna</option>
+            <option value="Victoria">Victoria</option>
+        </select>
+
+        <label>To:</label>
+        <select name="to">
+            <option value="any">Any destination</option>
+            <option value="Vancouver">Vancouver</option>
+            <option value="Kelowna">Kelowna</option>
+            <option value="Victoria">Victoria</option>
+        </select>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date">
+
+        <button type="button">Search Trips</button>
+    </form>
+</div>
+
+<h2>Available Trips</h2>
+<table border="1" cellpadding="10" cellspacing="0" width="100%">
+    <tr>
+        <th>Driver</th>
+        <th>Type</th>
+        <th>Route</th>
+        <th>Departure Date</th>
+        <th>Availability</th>
+        <th>Price</th>
+        <th>Details</th>
+    </tr>
+    <tr>
+        <td>Jerry</td>
+        <td>Seat</td>
+        <td>Vancouver ↔ Kelowna</td>
+        <td>Nov 12, 2026</td>
+        <td>3 Seats</td>
+        <td>$45</td>
+        <td><a href="TripDetails.html">View Details</a></td>
+    </tr>
+    <tr>
+        <td>Fanny</td>
+        <td>Items</td>
+        <td>Kelowna ↔ Victoria</td>
+        <td>Dec 15, 2026</td>
+        <td>1 Item</td>
+        <td>$50</td>
+        <td><a href="TripDetails.html">View Details</a></td>
+    </tr>
+    <tr>
+        <td>Arman</td>
+        <td>Items</td>
+        <td>Kelowna ↔ Victoria</td>
+        <td>Dec 25, 2026</td>
+        <td>1 Item</td>
+        <td>$50</td>
+        <td><a href="TripDetails.html">View Details</a></td>
+    </tr>
+    <tr>
+        <td>Sanjeet</td>
+        <td>Seat</td>
+        <td>Kelowna ↔ Victoria</td>
+        <td>Dec 26, 2026</td>
+        <td>2 Seats</td>
+        <td>$50</td>
+        <td><a href="TripDetails.html">View Details</a></td>
+    </tr>
+    <tr>
+        <td>Jerry</td>
+        <td>Seat</td>
+        <td>Kelowna ↔ Vancouver</td>
+        <td>Nov 15, 2026</td>
+        <td>2 Seats 1 Item</td>
+        <td>$45</td>
+        <td><a href="TripDetails.html">View Details</a></td>
+    </tr>
+</table>
+
+
+<h1>What Can You Send?</h1>
+<h2>Item Size & Weight</h2>
+<p>Each item should fit within a medium-sized suitcase or box (up to 65 × 45 × 30 cm and 15 kg).
+    <br> <i>*Item delivery is subject to driver acceptance and available cargo space.</i>
+</p>
+
+<h2>Eligible Items</h2>
+<p>Clothing, books, gifts, and small personal belongings.</p>
+
+<h2>Restricted Items</h2>
+<p>Items that are hazardous, perishable, or otherwise prohibited.</p>
+<h2>Need More Space?</h2>
+<p>Larger items may be accepted depending on the driver's available cargo space and approval.</p>
+
+
+<h1>Before You Book</h1>
+<h2>Check Your Trip Details</h2>
+<p>Review the departure time, route, and available space before requesting.</p>
+
+<h2>Clear & Fixed Pricing</h2>
+<p>Know your fare before sending a booking request.</p>
+
+<h2>Request & Confirmation</h2>
+<p>Your booking is confirmed after the driver accepts your request and payment is completed.</p>
+
+
+
+
+<footer>
+    <p>A BCIT student project. Not a live transportation service.</p>
+    <p>© 2026 TripShare</p>
+</footer>
